@@ -1,0 +1,287 @@
+---
+import PageLayout from "@/layouts/page.layout.astro";
+
+import HeaderNavigation from "@/components/header/header-navigation.astro";
+import FooterNavigation from "@/components/footer/footer-navigation.astro";
+
+import BlockElement from "@/components/block/block-element.astro";
+
+import hqFront from "@/images/hq/hq-front.jpg";
+import hqBack from "@/images/hq/hq-back.jpg";
+import hqKitchen from "@/images/hq/hq-kitchen.jpg";
+import hqHall from "@/images/hq/hq-hall.jpg";
+import { Image } from "astro:assets";
+import { Car, House, SendHorizonalIcon, TreeDeciduous } from "lucide-react";
+import JoinUsCta from "@/components/join-us-cta.astro";
+import FormTextBox from "@/components/ui/form-text-box.astro";
+import Button from "@/components/ui/button.astro";
+import FormTextArea from "@/components/ui/form-text-area.astro";
+---
+
+<PageLayout title="Hire our HQ">
+  <HeaderNavigation />
+
+  <BlockElement
+    id="hire-our-hq"
+    heading={{
+      title: "Hire our HQ",
+      subtitle:
+        "Our HQ comprises a large purpose-built HQ with a field behind.",
+      className: "text-primary",
+    }}
+    seperator={{ loading: "eager" }}
+  >
+    <div class="max-w-screen-lg mx-auto mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <Image
+            loading={"eager"}
+            src={hqHall}
+            alt={"Inside the HQ"}
+            quality={100}
+            height={960}
+            width={1280}
+            class="rounded-lg"
+          />
+        </div>
+
+        <div>
+          <Image
+            loading={"eager"}
+            src={hqBack}
+            alt={"Back of the HQ"}
+            quality={100}
+            height={960}
+            width={1280}
+            class="rounded-lg"
+          />
+        </div>
+        <div>
+          <Image
+            loading={"eager"}
+            src={hqFront}
+            alt={"Front of the HQ"}
+            quality={100}
+            height={960}
+            width={1280}
+            class="rounded-lg"
+          />
+        </div>
+        <div>
+          <Image
+            loading={"eager"}
+            src={hqKitchen}
+            alt={"HQ's kitchen"}
+            quality={100}
+            height={960}
+            width={1280}
+            class="rounded-lg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-screen-lg mx-auto">
+      <div
+        class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 md:space-y-0"
+      >
+        <div class="flex flex-col justify-start items-center text-center">
+          <div
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary lg:h-12 lg:w-12"
+          >
+            <House className="w-5 h-5 text-primary-foreground lg:w-6 lg:h-6" />
+          </div>
+          <h3 class="mb-2 text-xl font-bold">HQ</h3>
+          <p class="">
+            A spacious hall conveniently located in Addlestone next to the M25.
+          </p>
+        </div>
+
+        <div class="flex flex-col justify-start items-center text-center">
+          <div
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary lg:h-12 lg:w-12"
+          >
+            <TreeDeciduous
+              className="w-5 h-5 text-primary-foreground lg:w-6 lg:h-6"
+            />
+          </div>
+          <h3 class="mb-2 text-xl font-bold">Open space</h3>
+          <p class="">
+            1.5 acres of private open space situated behind the HQ including a
+            campfire circle.
+          </p>
+        </div>
+        <div class="flex flex-col justify-start items-center text-center">
+          <div
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary lg:h-12 lg:w-12"
+          >
+            <Car className="w-5 h-5 text-primary-foreground lg:w-6 lg:h-6" />
+          </div>
+          <h3 class="mb-2 text-xl font-bold">Parking</h3>
+          <p class="">
+            A large gravel driveway with ample of car parking spaces. Optional
+            overflow parking available.
+          </p>
+        </div>
+
+        <div class="flex flex-col justify-start items-center text-center">
+          <div
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary lg:h-12 lg:w-12"
+          >
+            <House className="w-5 h-5 text-primary-foreground lg:w-6 lg:h-6" />
+          </div>
+          <h3 class="mb-2 text-xl font-bold">Amenities</h3>
+          <p class="">
+            Fully equipped kitchen, a meeting room and separate toilets for
+            boys, girls, disabled & adults.
+          </p>
+        </div>
+      </div>
+    </div>
+  </BlockElement>
+
+  <div class="bg-alternative text-alternative-foreground">
+    <BlockElement
+      id="conditions"
+      heading={{
+        title: "Hire Conditions",
+        subtitle:
+          "HQ Hire is for Scouting purposes only. It is not available for general hire.",
+        className: "text-primary",
+      }}
+      seperator={{ loading: "eager" }}
+    >
+      <div class="max-w-screen-md mx-auto text-lg">
+        <p class="mb-2">
+          All bookings are for exclusive use of building and field. (NB Friday
+          evening Scouts use the hall.)
+        </p>
+        <p class="mb-2">Minimum booking is for a half day</p>
+        <p class="mb-2">Payment must be made in advance</p>
+        <p class="mb-2">
+          Payment includes a damage/cleaning deposit which is returned if HQ
+          left clean and tidy
+        </p>
+        <p class="mb-2">Rates as detailed in table below.</p>
+      </div>
+    </BlockElement>
+  </div>
+
+  <BlockElement
+    id="charges"
+    heading={{
+      title: "Charges",
+      subtitle: "",
+      className: "text-primary",
+    }}
+    seperator={{ loading: "eager" }}
+  >
+    <div class="max-w-screen-md mx-auto text-lg">
+      <table class="w-full text-center">
+        <thead>
+          <tr>
+            <th>Period</th>
+            <th>Hire Charge</th>
+            <th>Additional Cleaning Deposit</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Half day</td>
+            <td>£40</td>
+            <td>£10</td>
+            <td>Up to five hours</td>
+          </tr>
+          <tr>
+            <td>Full day</td>
+            <td>£75</td>
+            <td>£25</td>
+            <td>Excludes overnight stay</td>
+          </tr>
+          <tr>
+            <td>Weekend</td>
+            <td>£120</td>
+            <td>£30</td>
+            <td>Fri - Sun</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </BlockElement>
+
+  <div class="bg-alternative text-alternative-foreground">
+    <BlockElement
+      id="booking"
+      heading={{
+        title: "Booking",
+        subtitle:
+          "To enquire about booking please use the booking enquiry form below",
+        className: "text-primary",
+      }}
+      seperator={{ loading: "eager" }}
+    >
+      <div class="max-w-screen-md mx-auto">
+        <form name="contact" action="/functions/hq-hire" class="space-y-8">
+          <FormTextBox id="name" type="text" label="Name" placeholder="" />
+
+          <FormTextBox id="email" type="email" label="Email" placeholder="" />
+
+          <FormTextBox id="phone" type="text" label="Phone" placeholder="" />
+
+          <FormTextBox
+            id="groupName"
+            type="text"
+            label="Group Name"
+            placeholder=""
+          />
+
+          <FormTextBox
+            id="scoutDistrict"
+            type="text"
+            label="Scout District"
+            placeholder=""
+          />
+
+          <FormTextBox
+            id="dateRequested"
+            type="text"
+            label="Date Requested"
+            placeholder=""
+          />
+
+          <FormTextBox
+            id="hirePeriod"
+            type="text"
+            label="Hire Period"
+            placeholder=""
+          />
+
+          <FormTextArea
+            id="otherInformation"
+            label="Other Information"
+            placeholder=""
+          />
+
+          <Button Icon={SendHorizonalIcon} type="submit" text="Send" />
+          <div class="text-sm text-center">
+            Read our <a
+              href="/privacy-policy"
+              class="hover:underline underline-offset-2 text-primary"
+            >
+              Privacy Policy</a
+            >.
+          </div>
+        </form>
+      </div>
+    </BlockElement>
+  </div>
+
+  <div class="bg-primary text-primary-foreground">
+    <JoinUsCta />
+  </div>
+
+  <div class="bg-alternative text-alternative-foreground">
+    <FooterNavigation />
+  </div>
+</PageLayout>

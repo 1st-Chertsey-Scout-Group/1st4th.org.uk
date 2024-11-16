@@ -1,3 +1,24 @@
 {
-    "links": []
+    "links": [
+        {
+            "text": "Sections",
+            "url": "/#sections",
+            "target": "_self"
+        },
+        {
+            "text": "Address",
+            "url": "/#address",
+            "target": "_self"
+        },
+        {
+            "text": "Contact",
+            "url": "/#contact",
+            "target": "_self"
+        },
+        {
+            "text": "Hire our HQ",
+            "url": "/hire-our-hq",
+            "target": "_blank"
+        }
+    ]
 }
