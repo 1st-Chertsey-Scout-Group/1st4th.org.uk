@@ -16,6 +16,7 @@ import JoinUsCta from "@/components/join-us-cta.astro";
 import FormTextBox from "@/components/ui/form-text-box.astro";
 import Button from "@/components/ui/button.astro";
 import FormTextArea from "@/components/ui/form-text-area.astro";
+import FormSelect from "@/components/ui/form-select.astro";
 ---
 
 <PageLayout title="Hire our HQ">
@@ -223,17 +224,36 @@ import FormTextArea from "@/components/ui/form-text-area.astro";
     >
       <div class="max-w-screen-md mx-auto">
         <form name="contact" action="/functions/hq-hire" class="space-y-8">
-          <FormTextBox id="name" type="text" label="Name" placeholder="" />
+          <FormTextBox
+            id="name"
+            type="text"
+            label="Name"
+            placeholder=""
+            required={true}
+          />
 
-          <FormTextBox id="email" type="email" label="Email" placeholder="" />
+          <FormTextBox
+            id="email"
+            type="email"
+            label="Email"
+            placeholder=""
+            required={true}
+          />
 
-          <FormTextBox id="phone" type="text" label="Phone" placeholder="" />
+          <FormTextBox
+            id="phone"
+            type="text"
+            label="Phone"
+            placeholder=""
+            required={true}
+          />
 
           <FormTextBox
             id="groupName"
             type="text"
             label="Group Name"
             placeholder=""
+            required={true}
           />
 
           <FormTextBox
@@ -241,26 +261,33 @@ import FormTextArea from "@/components/ui/form-text-area.astro";
             type="text"
             label="Scout District"
             placeholder=""
+            required={false}
           />
 
           <FormTextBox
             id="dateRequested"
-            type="text"
+            type="date"
             label="Date Requested"
             placeholder=""
+            required={true}
           />
 
-          <FormTextBox
+          <FormSelect
             id="hirePeriod"
-            type="text"
             label="Hire Period"
-            placeholder=""
+            options={[
+              { label: "Half day" },
+              { label: "Full day" },
+              { label: "Weekend" },
+            ]}
+            required={true}
           />
 
           <FormTextArea
             id="otherInformation"
             label="Other Information"
             placeholder=""
+            required={false}
           />
 
           <Button Icon={SendHorizonalIcon} type="submit" text="Send" />
